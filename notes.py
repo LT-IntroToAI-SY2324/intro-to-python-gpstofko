@@ -5,27 +5,32 @@
 # types
 
 # str
-y = "I love Computer Science!"
+y: str = "My name is Divine Osuji"
 
 # numbers
+print(y)
 mynum = 47
+print(mynum)
 anothernum = 47.7
+print(anothernum)
 print(type(mynum))
 print(type(anothernum))
 
 # bools - True, False
 flag = True
+print(type(flag))
+flag = False
 print(flag)
 
-# lists - can hold a list of items of any type
+# # lists - can hold a list of items of any type
 lane_tech = ["chicago", "high school", 1908, 60618, "addison/western"]
-print(lane_tech.reverse())
+# print(lane_tech.reverse())
 print(lane_tech)
-z = lane_tech.pop()
-print(z)
+# z = lane_tech.pop()
+# print(z)
+print(lane_tech)
 
-
-# Indices
+# # Indices
 print(lane_tech[1])
 print(lane_tech[-1])
 print(lane_tech[len(lane_tech)-1])
@@ -86,16 +91,16 @@ print(lst)
 dict = {"name": "rob", "age": 30}
 print(dict["age"])
 
-# Random
-import random
+# # Random
+# import random
 
-food = ['pizza', 'carrots', 'eggs']
-dinner = random.choice(food)
-print(dinner)
+# food = ['pizza', 'carrots', 'eggs']
+# dinner = random.choice(food)
+# print(dinner)
 
-# f String
-age = 25
-# print("Mary is " + age + " years old")
-print(f"Mary is {age} years old")
+# # f String
+# age = 25
+# # print("Mary is " + age + " years old")
+# print(f"Mary is {age} years old")
 
 
