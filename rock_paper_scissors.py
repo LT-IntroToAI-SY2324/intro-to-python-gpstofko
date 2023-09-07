@@ -1,25 +1,43 @@
-# We will write a rock paper scissors game in class - Complete it in this file
-
-# We have player and computer
-    # Computer chooses a random number for rock, paper, or scissors
 import random
 
-player_choice = "rock"
 computer_choice = "paper"
 
 def get_choices():
     options = ['rock', 'paper', 'scissors']
-    player_choice = "rock"
     computer_choice = random.choice(options)
     choices = {"player": player_choice, "computer": computer_choice}
 
     return choices
 
-choices = get_choices()
+def player_input():
+    user_input = input("Please enter your choice (rock, paper, or scissors):")
+    return user_input
 
-print(choices)
-# Player input uses rock paper or scissors
+def play_game():
+    choices = get_choices()
+    if choices["player"] == "rock" and choices["computer"] == "rock":
+        return "tie"
+    elif choices["player"] == "rock" and choices["computer"] == "paper":
+        return "computer wins"
+    elif choices["player"] == "rock" and choices["computer"] == "scissors":
+        return "player wins"
+    elif choices["player"] == "paper" and choices["computer"] == "paper":
+        return "tie"
+    elif choices["player"] == "paper" and choices["computer"] == "rock":
+        return "player wins"
+    elif choices["player"] == "paper" and choices["computer"] == "scissors":
+        return "computer wins"
+    elif choices["player"] == "scissors" and choices["computer"] == "scissors":
+        return "tie"
+    elif choices["player"] == "scissors" and choices["computer"] == "rock":
+        return "computer wins"
+    elif choices["player"] == "scissors" and choices["computer"] == "paper":
+        return "player wins"
 
-# Store in a dictionary
 
-# Run a function to see who wins
+
+player_choice = player_input()
+
+print(get_choices())
+
+print(play_game())
