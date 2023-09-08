@@ -1,20 +1,18 @@
 import random
 
-computer_choice = "paper"
+def player_input():
+    user_input = input("Please enter your choice (rock, paper, or scissors):")
+    return user_input
 
 def get_choices():
-    options = ['rock', 'paper', 'scissors']
+    options = ["rock", "paper", "scissors"]
     computer_choice = random.choice(options)
     choices = {"player": player_choice, "computer": computer_choice}
 
     return choices
 
-def player_input():
-    user_input = input("Please enter your choice (rock, paper, or scissors):")
-    return user_input
-
 def play_game():
-    choices = get_choices()
+    choices = game
     if choices["player"] == "rock" and choices["computer"] == "rock":
         return "tie"
     elif choices["player"] == "rock" and choices["computer"] == "paper":
@@ -34,10 +32,10 @@ def play_game():
     elif choices["player"] == "scissors" and choices["computer"] == "paper":
         return "player wins"
 
-
-
 player_choice = player_input()
 
-print(get_choices())
+game = get_choices()
+
+print(game)
 
 print(play_game())
